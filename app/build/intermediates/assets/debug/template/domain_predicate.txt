@@ -1,0 +1,265 @@
+//==================================
+// Key value for transforming predicate into english language.
+//==================================
+// Plan
+//----------------------------------
+la_plan=provide local anesthesia
+rb_plan=insert rubber dam
+oc_plan=prepare access
+//----------------------------------
+// Action
+//----------------------------------
+select_local_anesthesia_type=select the solution type of local anesthesia
+pierce_anesthesia_needle=pierce the anesthesia needle
+aspirate=aspirate
+retract=retract
+inject_anesthesia_and_draw=inject anesthesia and draw the needle
+check_numb=check if the mount is numb
+insert_rubber_dam=insert rubber dam to the working tooth
+drill_to_pulp_chamber=drill to provide the access to the pulp chamber
+
+//----------------------------------
+// Quantitative Comparison
+//----------------------------------
+less=is less than
+less_or_equal=is less or equal than
+greater=is greater than
+greater_or_equal=is greater than
+equal=equals to
+fn_atom=equals to
+equal_atom=equals to
+
+//----------------------------------
+// tooth Type
+//----------------------------------
+premolar=is premolar
+molar=is molar
+anterior=is anterior
+canine=is canine
+
+//----------------------------------
+// Predicates: global
+//----------------------------------
+working_tooth_type=working tooth type
+tool_set=tool set is
+tool_set_not=tool set is not
+
+tool_type=tool type is
+tool_type_not=tool type is not
+
+diagnosis=diagnosis is
+diagnosis_base=the patient diagnosis
+
+//----------------------------------
+// constants: global
+//----------------------------------
+pulpitis=pulpitis
+pulp_necrosis=pulp_necrosis
+heart_disease=heart disease
+
+id_nerve=id nerve
+lingual_nerve=lingual nerve
+artery=artery
+pterygoid_muscle=pterygoid muscle
+coronoid_notch=coronoid notch
+pterygomandibular_raphae=pterygomandibular raphae
+
+//----------------------------------
+// Predicates: share between steps e.g. rb and oc
+//----------------------------------
+wt_strong=working tooth is strong
+wt_strong_not=working tooth is not strong
+
+structure_enough=tooth structure is enough
+structure_enough_not=tooth structure is not enough
+
+caries_visible=caries are visible
+caries_visible_not=caries are not visible
+
+structure_enough=tooth structure is enough
+structure_enough_not=tooth structure is not enough
+
+//----------------------------------
+// Predicates: LA
+//----------------------------------
+cartridge=cartridge
+
+tip_at_artery=tip is at the artery
+tip_at_artery_not=tip is not at the artery
+
+la_solution_type=local anesthesia solution type is
+la_solution_type_not=local anesthesia solution type is not
+
+la_selected_solution_type=the selected anesthesia solution type is
+la_selected_solution_type_not=the selected anesthesia solution type is not
+
+la_neeldle_pierced=anesthesia needle is pierced
+la_neeldle_pierced_not=anesthesia needle is not pierced
+
+landmark_location=the landmark location is
+landmark_location_not=the landmark location is not
+
+ref_point_tooth=reference point tooth number is
+ref_point_tooth_not=reference point tooth number is not
+
+target_nerve_block=target nerve block is
+target_nerve_block_not=target nerve block is not
+
+anesthetic_in=anesthetic is injected
+anesthetic_in_not=anesthetic is not injected
+
+risk_anesthesia_not_long_last=anesthesia is not long last
+risk_anesthesia_not_long_last_not=anesthesia is long last
+
+target_check_numb=target for checking numb is
+target_check_numb_not=target for checking numb is not
+
+lip_numb_location= the numb area of the lib is
+lip_numb_location_not= the numb area of the lib is not
+
+tip_needle_at=the tip of the needle is at
+tip_needle_at_not=the tip of the needle is not at
+
+target_anesthesia_area_reach=the target of anesthesia area is reached
+target_anesthesia_area_reach_not=the target of anesthesia area is not reached
+
+anesthesia_long_last=anesthesia long last
+anesthesia_long_last_not=anesthesia does not long last
+
+palpitation=the patient gets palpitation
+palpitation_not=there is no risk to get the palpitation
+
+//underlying_disease=the patient's underlying disease is  //this is for pair value
+underlying_disease=the patient has the underlying disease
+underlying_disease_not=the patient does not have the underlying disease
+
+patient_heart_attack=the patient gets heart attack.
+pulp_vital=pulp vital
+
+
+//----------------------------------
+// Constants: LA
+//----------------------------------
+lidocaine=lidocaine
+mepivacaine=mepivacaine
+
+at_coronoid_notch=at coronoid notch
+at_pterygomandibular_raphae=at pterygomandibular raphae
+between_coronoid_notch_and_pterygomandibular_raphae=between coronoid notch and pterygomandibular raphae
+
+id_nerve_block=id nerve block
+lingual_nerve_block=lingual nerve block
+
+lower_left_lip=lower left lip
+lower_right_lip=lower right lip
+
+red=red
+clear=clear
+
+//----------------------------------
+// Predicates: RB
+//----------------------------------
+clamp_with_rb_on_tooth=clamp is inserted with rubber dam on the tooth
+clamp_with_rb_on_tooth_not=clamp is inserted with rubber dam on the tooth
+
+clamp_risk_to_released=clamp is risk to be released
+clamp_risk_to_released_not=clamp is not risk to be released
+
+patient_risk_to_faint=the patient is risk to get fainted
+patient_risk_to_faint_not=the patient is not risk to get fainted
+
+rb_pos_with_nose=rubber sheet position
+rb_pos_with_nose_not=rubber sheet position is not
+
+rb_tools_set=rubber dam tool set
+rb_tools_set_not=tool set is not rubber dam
+
+four_point_contact_on_tooth=there are four point contacts on the tooth
+four_point_contact_on_tooth_no=there are not four point contacts on the tooth
+
+working_tooth_separated=the area of the working tooth is completely separated
+working_tooth_separated_not=the area of the working tooth is not separated
+
+clamp_no=clamp number
+clamp_no_not=the clamp number is not
+//----------------------------------
+// Constants : RB
+//----------------------------------
+under=is under the nose
+cover=covers the nose
+
+under_not=is not under the nose
+cover_not=cover the nose
+
+c0=0
+c9=9
+c14=14
+rb_tool_set=rubber dam tool set
+clamp=clamp
+round_diamond_bur=round diamond bur
+steel_round_bur=steel round bur
+safe_tipped_taper_bur=safe tipped taper bur
+
+//----------------------------------
+// Predicates: OC
+//----------------------------------
+drill_shape_action=drill shape
+
+pc_floor_bleeding=pulp chamber floor is bleeding
+pc_floor_bleeding_not=pulp chamber floor is not bleeding
+
+pc_floor_visible=pulp chamber floor is visible
+pc_floor_visible_not=pulp chamber floor is not visible
+
+pc_visible=pulp chamber is visible
+pc_visible_not=pulp chamber is not visible
+
+pc_width_size_function=pulp chamber width
+drill_size_function=drill size
+
+drill_shape_action=drill shape for tooth
+
+wt_fracture=working tooth is fracture
+wt_fracture_not=working tooth is not fracture
+
+pc_aseptic=pulp chamber is aseptic
+pc_aseptic_not=pulp chamber is not aseptic
+
+structure_overcut=working tooth is overcut
+structure_overcut_not=working tooth is not overcut
+
+wt_aseptic=working tooth is aseptic
+wt_aseptic_not=working tooth is not aseptic
+
+pc_has_tissue_fall=tissue is falled into pulp chamber
+pc_has_tissue_fall_not=tissue is not falled into pulp chamber
+
+pc_floor_depth_function=the depth of the pulp chamber floor
+drill_depth_function=the drilling depth
+enamel_dentine_thickness_function=thickness of the enamel and dentine
+drill_shape=the drilling shape
+working_tooth_jaw=the working tooth is on
+
+drill_entry=the entry point is
+drill_entry_not=the entry point is not
+drill_direction=the drilling direction is
+drill_direction_not=the drilling direction is not
+
+structure_ledge=there is ledge
+structure_ledge_not=there is no ledge
+
+//----------------------------------
+// Constants: OC
+//----------------------------------
+apical=apical
+occlusal=occlusal
+buccal=buccal
+lingual=lingual
+mesial=mesial
+distal=distal
+
+upside_down_triangle=upside down triangle
+oval=oval
+triangle=triangle
+mandibular=mandibular
+maxillary=maxillary

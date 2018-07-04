@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\f2bae21435ae2e9ad5ee360bd33b0f0418aae356\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-2f054103fe6a04f37c1ed0813cb8ae975f89c879.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\8931c2b16a20b3ddc46c541832642d698876cadb\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-a1dbbe18fb48b3b616b9f843a0fd10b6adf1f084.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.5\e7fd981408caba8a0c0fb276413562468d260160\log4j-api-2.5.jar"
+        revision="26.0.2"
+        sha1="e7fd981408caba8a0c0fb276413562468d260160">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\log4j-api-2.5-d43a2ff75ee6e14af8dbfb839028524582c5b0c4.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        revision="26.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\support-annotations-25.3.1-44c537cf5710ad1e8adf069a1652da68f115c74a.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\AppData\Local\Android\Sdk\platforms\android-26\optional\org.apache.http.legacy.jar"
+        revision="26.0.2"
+        sha1="d5b8c556427a60ed5f7f0abc415555de7bbba1ad">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\org.apache.http.legacy-9a3bcb2d5d2ca2c80d1e85bc29383cef099b6d4f.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\68f16a2aad364e2cbf6cf9c65edc0bf072e73908\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-f65cfe30b5236111c53ec7570867bfc1c4667639.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\23d1fe9fe71352d9bf5ec88d9208e4a86564dd19\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-70bd54a7668c5e030a81c70ffcaa39667e07dd71.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\e128c28a4a0c6149dcc89d209ea6d7da6946f7c9\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-aae40d3f7987efd161769d911bc4a483f9102623.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\877205766888a5cd9fcf7d288eaddfb0aa4e359a\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-9b1859b7cd2d1dfa9fe2664fdd13015041fc623b.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\cdc0709973e039d01bc7c3b21fb75cba3e21bc6a\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-23bcb971177fe938aa772ea8f638d1c7125eec9d.jar" />
+    </item>
+    <item
+        jar="D:\Android\workspace\desitra_no_intervention\library\build\intermediates\bundles\default\classes.jar"
+        revision="26.0.2"
+        sha1="4924a1c38fe6a308698768b6d1605e70b67b5356">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-23d59df145a7dee4ff37889e40e3a5eed29e843c.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\3b930403489bae0502b48264f091fe18e0dc0cfa\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-65f35cc7f8f98b6fce33f55a5f0cb9fd360fd6fa.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\b02b63d2a713d9ff88d78135cd3e7602224777d2\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-8b45f88862540bb1afaf669f2f99498542d75452.jar" />
+    </item>
+    <item
+        jar="D:\Android\workspace\desitra_no_intervention\app\libs\jsr223.jar"
+        revision="26.0.2"
+        sha1="1f7b65bf95cfb09514802d57424c23f07fc33096">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\jsr223-81f20bbae5a65405163d0169ec698a0d4e3b44c4.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\4e1ba0af36d32876d45b18d9e6ae603e4a9e0aca\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-ee0ab4211fbaea25e5b5684eee44f95b9b835227.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\99da2f407c814a869fd31e55382a6487b421b26f\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-4f6c3acc920966e7a65d787ce0331a8807e4ea2b.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\constraint-layout-solver-1.0.2-5d6fb3b000d89710d763a7e026676bf3c4663358.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\2322aa3589aaa60448949e9f22bb79b73ca2067b\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-c250b38b064fe68ad2bc1c4e6c8c66a4cd07ff53.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\AppData\Local\Android\Sdk\platforms\android-26\android.jar"
+        revision="26.0.2"
+        sha1="18eaee6ff2a1c15c603daafb41277ea9376f30b5">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackRuntimeLibraries\debug\jars\8000\40\android-66fdb1efff66fc9b21f34c509d15f5dcb7e99690.jar" />
+    </item>
+    <item
+        jar="D:\Android\workspace\desitra_no_intervention\app\libs\simple-xml-2.7.1.jar"
+        revision="26.0.2"
+        sha1="083623424bcfa03bd598e709765bad0816c2375d">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\simple-xml-2.7.1-f001fdea6651f2c6afc7e7ea05876171bdb84c35.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\ef2d824b6fcf1d141fd68232a9e5ac4de37d03fe\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-6b114d04972f6770e756b83947f4015764c37637.jar" />
+    </item>
+    <item
+        jar="D:\Android\workspace\desitra_no_intervention\app\libs\pddl4j-3.5.0.jar"
+        revision="26.0.2"
+        sha1="8b1c3af9fafe5937b46a033a6f123f0e10abb291">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\pddl4j-3.5.0-abd8350dacdc8ad4770a79b4944baae08f8b9cc3.jar" />
+    </item>
+    <item
+        jar="C:\Users\FearNothing\.android\build-cache\2db6bcf4ee49cce0f4c40406e51b93ee24722ad7\output\jars\classes.jar"
+        revision="26.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="D:\Android\workspace\desitra_no_intervention\app\build\intermediates\transforms\preJackPackagedLibraries\debug\jars\8000\1f\classes-e585654c9aa33043b614fe603e500d6f842122d4.jar" />
+    </item>
+
+</items>

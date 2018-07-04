@@ -1,0 +1,21 @@
+( define ( subplan lt_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem main_problem1 )
+	;;(:planvars )
+	;;( :init); //for initialized variable
+	( :body
+	   ( sequence
+	       (action (measure_working_length_by_inserting_file)
+                :desired_outcome( AND
+                    ( NOT (WL_TOO_DEEP) ) :allow_explore
+                    ( NOT (WL_TOO_SHORT) ) :allow_explore
+                    ( WL_APPEAR ) :main
+                    ( NOT (RISK_TO_UNSTABLE_FILE) )
+                )
+           )
+           ; different measuring approach has different input and methods
+	
+	   );; end-sequence
+	);; end-body
+) ;;end define

@@ -1,0 +1,65 @@
+measure_working_length_by_inserting_file
+irregate
+expand_overall_root_canal
+expand_curvical_root_canal
+measure_working_length_by_inserting_file
+expand_apical_root_canal
+remove_rc_ledge
+irregate
+mop_rc
+select_and_try_main_cone
+coat_cement_to_rc_wall
+insert_selected_main_cone
+insert_lateral_cones
+press_and_cut_cones
+
+
+After OC
+---- LT Plan ----
+Action: Measure working Length
+- Tool Type [TOOL_TYPE = FILE] (Student input. Similar to OC when choosing tool)
+- Difference between current file depth and root canal depth [RC_DEPTH_TO_CURRENT_FILE_DEPTH_DIFF_FUNCTION = 0.5 - 1] (student input number(INTEGER))
+
+---- MI Plan ----
+Action: Expand overall root canal initially
+- Tool type [TOOL_TYPE = FILE] (add RC Spreader, RC Plugger, Gates-Glidden Drill, and File to the option)
+- Expand incrementally from tool size number .... [INITIAL_TOOL_SIZE_NUMBER < 10] to tool size number ... [FINAL_TOOL_SIZE_NUMBER = 15] (student choose number 6,8,10,15,20,25,30,35,40,45,51,55 (INTEGER))
+- Size difference between each incremental expansion [SIZE_DIFFERENCE_BETWEEN_INCREMENTAL_EXPANSION = 1] (student choose integer 1, 2, 3)
+
+Action: Expand curvical root canal
+- Tool type [TOOL_TYPE = GATES_GLIDDEN_DRILL]
+- Expand incrementally from tool size number .... [INITIAL_TOOL_SIZE_NUMBER < 10] to tool size number ... [FINAL_TOOL_SIZE_NUMBER = 15] (student choose number 6,8,10,15,20,25,30,35,40,45,51,55 (INTEGER))
+- Size difference between each incremental expansion [SIZE_DIFFERENCE_BETWEEN_INCREMENTAL_EXPANSION = 1] (student choose integer 1, 2, 3)
+- Drill Depth: .... than curve root canal area [RC_DRILL_DEPTH SHALLOWER_THAN_CURVE_RC_AREA] (Student choose deeper or shallower)
+
+Action: Expand apical root canal
+- Tool type [TOOL_TYPE = FILE] (add RC Spreader, RC Plugger, Gates-Glidden Drill, and File to the option)
+- Expand incrementally from tool size number .... [INITIAL_TOOL_SIZE_NUMBER < 15] to tool size number ... [FINAL_TOOL_SIZE_NUMBER = 30] (student choose number 6,8,10,15,20,25,30,35,40,45,51,55 (INTEGER))
+- Size difference between each incremental expansion [SIZE_DIFFERENCE_BETWEEN_INCREMENTAL_EXPANSION = 1] (student choose integer 1, 2, 3)
+
+Action: Remove root canal ledge
+- Tool type [TOOL_TYPE = FILE]
+- Tool Size Number [TOOL_SIZE_FUNCTION = 30] (student choose number 6,8,10,15,20,25,30,35,40,45,51,55 (INTEGER))
+
+---- TMC Plan ----
+Action: Select and try main cone
+- Main cone size number [MC_SIZE_NUMBER = 30] (student choose number 6,8,10,15,20,25,30,35,40,45,51,55 (INTEGER))
+
+---- RCF Plan ----
+Action: Irregate
+- Solution type 
+
+Action: Mop root canal
+
+Action: Coat cement to root canal side
+- Tool type [TOOL_TYPE]
+
+Action: Insert selected main cone
+
+Action: Insert lateral cones
+- Tool type [TOOL_TYPE = RC_SPREADER]
+
+Action: Press and Cut cones
+- Tool type [TOOL_TYPE = RC_PLUGGER]
+- Cut cones at depth ... mm deeper than pulp chamber floor (student input number(INTEGER)) [CONE_DEEPER_THAN_PC_FLOOR_FUNCTION = 2]
+

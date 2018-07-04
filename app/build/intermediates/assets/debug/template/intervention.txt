@@ -1,0 +1,143 @@
+//---------------------------------
+// Strategy x: Hint for incorrect action
+//---------------------------------
+stx_hint_incorrect_action=Think about the action that makes [PJ_NODES].
+
+//---------------------------------
+// Strategy 8: Ask Q-C or Q-User action
+//---------------------------------
+st8_question=Should [CORRECT_ANSWER_EXP]?
+
+
+//---------------------------------
+// Strategy 9: Tell the answer
+//---------------------------------
+st9_tell_answer=The answer is [ANSWER_DESCRIPTION].
+
+//---------------------------------
+// Strategy 10: Hint
+//---------------------------------
+st10_hint=Think about [HINT].
+
+//---------------------------------
+// Strategy 11: Reconfirm the action
+//----------------------------------
+st11_reconfirm_action=You should [TUTOR_ACTION_NODE].
+st11_reconfirm_correct_action=You should [ACTION_NODE] with [ACTION_COND].
+
+//---------------------------------
+// Strategy 12: Ask a question to reconfirm the consequence of the action
+// Question : [Action]
+// Choices : [Projections]
+// Strategy 12 --> strategy 6.2
+//---------------------------------
+st6_2_question=Why do you [ACTION_NODE]?
+st6_2_question_reconfirm_consequence = Why do you [ACTION_NODE] with [USER_ACTION_PARAMS]?
+
+//---------------------------------
+// Strategy 12 --> strategy 6.1
+//---------------------------------
+st6_1_question=Why [PROJECTION_NODE]?
+//st6_1_question=What is [PERCEPTION]?
+//st6_1_question=Why do you [PROJECTION_NODE]?
+//st6_1_question=Why do you [ACTION_NODE]
+//st6_1_question_PJ=such that [PROJECTION_NODE]
+//st6_1_question_mark=?
+//st6_1_question=Why do you [PARENT_PLAN]?
+//st6_1_question_reconfirm_perception = Why do you [ACTION_NODE] with [USER_ACTION_PARAMS]?
+
+//---------------------------------
+// Strategy 12 --> strategy 6.1 - parent plan
+//---------------------------------
+st6_1_question_parent_plan=Why do you [PARENT_PLAN]?
+st7_1_question_from_6_1_parent_plan=What is [BASE_PREDICATE]?
+
+//---------------------------------
+// Strategy 13: Ask a question about the correct perception relevant to the correct action  Q-P
+// Question : [Action]
+// Choices : [Perception]
+// Strategy 13 and 13a --> strategy 7.2, 7.3
+//---------------------------------
+//st7_1_question_from_6_1=What is your [OPTIONAL_CONDITION_BASE_PREDICATE]?
+st7_1_question_from_6_1=What do you have to consider when you [PROJECTION_NODE]?
+
+st7_2_question_from_6_2=What is the objective of [ACTION_NODE]?
+st7_2_question=What factor makes [ACTION_NODE] successfully?
+st7_3_question_relevant_node=What should be the correct [ACTION_COND] for [ACTION_NODE]?
+
+//st14_prompt_repeated_incorrect_action=You [ACTION_NODE] incorrectly again.
+st14_prompt_repeated_incorrect_action=Again, your action is not correct.
+st15_hint_allow_explore="Look [ALLOW_EXPLORE_PJ_NODE]"
+
+//---------------------------------
+// Strategy 5: FB+
+//---------------------------------
+leading_positive_fb_1=Good!
+leading_positive_fb_2=That's right.
+leading_positive_fb_3=Excellent!
+
+short_positive_fb_1=Good!
+short_positive_fb_2=That's right.
+short_positive_fb_3=Excellent!
+short_positive_fb_4=[BLANK]
+
+//positive_fb=[LEADING_POS_FB] [ACTION_NODE] with conditions of [ACTION_COND] is correct.
+positive_fb=[LEADING_POS_FB] It is correct to [ACTION_NODE] with conditions of [ACTION_COND].
+positive_fb_2_1=[LEADING_POS_FB] You [ACTION_NODE] when [P_NODES] is correct.
+positive_fb_2_2=Because [C_NODES]
+positive_fb_2_3=So [PJ_NODES]
+
+//---------------------------------
+// Strategy 3,4: FB-
+//---------------------------------
+
+leading_negative_fb_1=Nein!
+leading_negative_fb_2=That's not right.
+leading_negative_fb_3=Oh no!
+
+negative_fb_1st_1=You [ACTION_NODE] such that [ACTION_COND], [PJ_NODES].
+negative_fb_1st_2= Look at the [P_NODES].
+negative_fb_1st_3= Look at the [ACTION_PARAMS].
+
+negative_fb_1st2_1=You [ACTION_NODE], [PJ_NODES].
+negative_fb_1st2_2= Look at the [P_NODES].
+negative_fb_1st2_3= Look at the [ACTION_PARAMS].
+
+negative_fb_1st=You [ACTION_NODE] such that [ACTION_COND], [PJ_NODES]. Look at the [P_NODES].
+
+negative_fb_2nd_1=You [ACTION_NODE] such that [ACTION_COND]. [PJ_NODES].
+negative_fb_2nd_2=You should pay attention to the [P_NODES]
+negative_fb_2nd_3=because [C_NODES]
+negative_fb_2nd_4=.
+
+
+//---------------------------------------------------------------
+// Strategy 14: Validate the performance of the task carried out.
+// Strategy 15: Query understanding of the task
+// Strategy 16: Tell the answer
+//---------------------------------------------------------------
+detail_question_pnode_label_1=What kind of information required to identify [ACTION_DETAIL] ?
+detail_question_pnode_label_2=What kind of information you need to decide for the [ACTION_DETAIL] ?
+detail_question_pnode_label_3=What kind of information referring to [ACTION_DETAIL] ?
+
+detail_question_non_user_action_pnode_label_1=What kind of information required to identify [CNODE] ?
+detail_question_non_user_action_pnode_label_2=What kind of information you need to decide for the [CNODE] ?
+detail_question_non_user_action_pnode_label_3=What kind of information referring to [CNODE] ?
+
+short_negative_fb_1=That is not right.
+short_negative_fb_2=This is not correct. 
+short_negative_fb_3=No, that is not correct.
+
+tell_answer_pnode_label=You should recognize that [P_NODES] defines [Q_TOPIC].
+tell_answer_pnode_cnode_label=Because [P_NODES], [C_NODES].
+
+hint_pnode_label=[BLANK]
+
+level1_question_validate_pjnode_label=Did you achieve the desired outcome?
+inform_outcome=It is found that [PJNODES]. This is [IS_DESIRED] desire outcome.
+
+step2_question_acnode_label_1=What causes [PJNODES]?
+step2_question_acnode_label_2=Can you imagine why [PJNODES]?
+step2_question_acnode_label_3=Why does the situation "[PJNODES]" happen?
+
+tell_answer_level2_label_1=Because [AC_COND], [PJNODES]. 

@@ -1,0 +1,57 @@
+( define ( subplan la_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem la_problem1 )
+	;;(:planvars )
+	
+	( :init); //for initialized variable
+	( :body
+	   ( sequence
+	          (action (select_anesthesia) 
+	            :desired_outcome (AND 
+	            					( NOT(PATIENT_ANTIARRHYTHMIC_ACTION) )
+	            					( ANESTHESIA_LONG_LAST ) ) 
+	            ;;NOTE: Actually, 
+	            ;;when the patient has underlying disease, the solution should be mepivacaine
+	            ;;when the patient does not have underlying disease, the solution should be lidocaine )
+	            ;;TODO: Enhance the desire outcome
+	          );;end-action
+	
+	          (action (pierce_anesthesia_needle) 
+	            :desired_outcome (AND 
+	            					(NEEDLE_PIERCED) 
+	            					(= (PIERCE_DEPTH_FUNCTION) 20) 
+	            					( TARGET_ANESTHESIA_AREA_REACH )
+	            					(NOT (POINT_TO_LINGUAL_NERVE) )
+	            					(NOT (POINT_TO_PTERYGOID_MUSCLE) )
+	            					(NOT (POINT_TO_CORONOID_NOTCH) )
+	            					(NOT (POINT_TO_PTERYGOMANDIBULAR_RAPHAE) )
+	            					)
+	          );;end-action
+	
+	          (action (aspirate) 
+	            :desired_outcome (  CARTRIDGE CLEAR )
+	          );;end-action
+	
+	          (while (CARTRIDGE RED) 
+	                 ( action (retract) 
+	                   :desired_outcome ( CARTRIDGE CLEAR ) :allow_explore
+	                 ) ;;end-action
+	
+	                 ( action (aspirate) 
+	                   :desired_outcome ( CARTRIDGE CLEAR )  ;;TOTHINK_HOW TO MAKE IT CLEAN
+	                 ) ;;end-action
+	          );;end-while
+	
+	          ( action (inject_anesthesia) 
+	                   :desired_outcome ( AND (ANESTHETIC_IN) 
+	                   						  ( NOT ( RISK_ANESTHESIA_NOT_LONG_LAST ))
+	                      				) 
+	          );;end-action
+	
+	          ( action (check_numb) 
+	                   :desired_outcome (LIP_NUMB)   ;; the last desired outcome should be the satisfy the goal in la_problem.pddl
+	          );;end-action
+	   );; end-sequence
+	);; end-body
+) ;;end define

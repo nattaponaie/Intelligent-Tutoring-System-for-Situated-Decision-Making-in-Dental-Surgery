@@ -1,0 +1,62 @@
+( define ( subplan la_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem la_problem1 )
+	;;(:planvars )
+	
+	( :init); //for initialized variable
+	( :body
+	   ( sequence
+	          
+	          (action (select_local_anesthesia_type)
+                :desired_outcome (AND
+                                    ( LA_SELECTED_SOLUTION_TYPE LIDOCAINE ) :main
+                                    ( ANESTHESIA_LONG_LAST )
+                                    ( NOT( PALPITATION ) ) )
+                ;;NOTE: Actually,
+                ;;when the patient has underlying disease, the solution should be mepivacaine
+                ;;when the patient does not have underlying disease, the solution should be lidocaine )
+                ;;TODO: Enhance the desire outcome
+              );;end-action
+
+			  (action (pierce_anesthesia_needle)
+	            :desired_outcome (AND
+	            					(LA_NEEDLE_PIERCED)
+   	            					;(= (PIERCE_DEPTH_FUNCTION) 20)       :main
+	            					( TARGET_ANESTHESIA_AREA_REACH )     :main
+	            					( TIP_NEEDLE_AT ID_NERVE )
+	            				)
+	          );;end-action
+	          
+
+	          (action (aspirate)
+	            :desired_outcome ( CARTRIDGE CLEAR ) :main
+	          );;end-action
+
+	          (while (CARTRIDGE RED)
+	                 ( action (retract)
+	                   :desired_outcome ( CARTRIDGE CLEAR ) :allow_explore :main
+	                 ) ;;end-action
+
+	                 ( action (aspirate)
+	                   :desired_outcome ( CARTRIDGE CLEAR )  :main ;;TOTHINK_HOW TO MAKE IT CLEAN
+	                 ) ;;end-action
+	          );;end-while
+
+	          ( action ( inject_anesthesia_and_draw )
+	                   :desired_outcome ( AND
+                                            ( ANESTHETIC_IN )
+                                            ( NOT( LA_NEEDLE_PIERCED ) )
+                                            ( = (INJECT_AMT_FUNCTION) 1 )
+                                            ( TARGET_NERVE_BLOCK ID_NERVE_BLOCK )     :main
+                                            ( NOT ( RISK_ANESTHESIA_NOT_LONG_LAST ) )
+	                      				) 
+	          );;end-action
+	
+	          ( action (check_numb) 
+	                :desired_outcome ( LIP_NUMB_LOCATION LOWER_LEFT_LIP )  :main ;; the last desired outcome should be the satisfy the goal in la_problem.pddl
+	          );;end-action
+
+	   );; end-sequence
+	);; end-body
+) ;;end define

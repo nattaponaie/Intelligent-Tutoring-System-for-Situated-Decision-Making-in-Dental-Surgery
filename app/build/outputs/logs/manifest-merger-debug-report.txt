@@ -1,0 +1,118 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:2:1-38:12
+	package
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:3:5-37
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+application
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:5:5-33:19
+MERGED from [com.android.support:design:25.3.1] C:\Users\FearNothing\.android\build-cache\68f16a2aad364e2cbf6cf9c65edc0bf072e73908\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:transition:25.3.1] C:\Users\FearNothing\.android\build-cache\23d1fe9fe71352d9bf5ec88d9208e4a86564dd19\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\FearNothing\.android\build-cache\4e1ba0af36d32876d45b18d9e6ae603e4a9e0aca\output\AndroidManifest.xml:9:5-20
+MERGED from [desitra_no_intervention:library:unspecified] D:\Android\workspace\desitra_no_intervention\library\build\intermediates\bundles\default\AndroidManifest.xml:11:5-15:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\FearNothing\.android\build-cache\ef2d824b6fcf1d141fd68232a9e5ac4de37d03fe\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\FearNothing\.android\build-cache\cdc0709973e039d01bc7c3b21fb75cba3e21bc6a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\FearNothing\.android\build-cache\b02b63d2a713d9ff88d78135cd3e7602224777d2\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\FearNothing\.android\build-cache\877205766888a5cd9fcf7d288eaddfb0aa4e359a\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\FearNothing\.android\build-cache\3b930403489bae0502b48264f091fe18e0dc0cfa\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\FearNothing\.android\build-cache\8931c2b16a20b3ddc46c541832642d698876cadb\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\FearNothing\.android\build-cache\2322aa3589aaa60448949e9f22bb79b73ca2067b\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\FearNothing\.android\build-cache\e128c28a4a0c6149dcc89d209ea6d7da6946f7c9\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\FearNothing\.android\build-cache\99da2f407c814a869fd31e55382a6487b421b26f\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:8:9-41
+	android:supportsRtl
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:10:9-35
+	android:roundIcon
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:9:9-54
+	android:allowBackup
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:6:9-35
+	android:icon
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:7:9-43
+	android:theme
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.surgical.decision3.panel.MainActivity
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:13:9-29:20
+	android:label
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:15:13-45
+	android:launchMode
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:16:13-48
+	android:alwaysRetainTaskState
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:17:13-49
+	android:name
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:14:13-69
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:21:13-25:29
+action#android.intent.action.MAIN
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:22:17-69
+	android:name
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:22:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:24:17-77
+	android:name
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:24:27-74
+activity#com.surgical.decision3.panel.InterventionActivity
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:31:9-123
+	android:label
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:31:19-56
+	android:name
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:31:57-121
+uses-permission#ANDROID.PERMISSION.READ_EXTERNAL_STORAGE
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:35:5-79
+	android:name
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:35:22-77
+uses-permission#ANDROID.PERMISSION.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:36:5-80
+	android:name
+		ADDED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml:36:22-78
+uses-sdk
+INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:25.3.1] C:\Users\FearNothing\.android\build-cache\68f16a2aad364e2cbf6cf9c65edc0bf072e73908\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\FearNothing\.android\build-cache\f2bae21435ae2e9ad5ee360bd33b0f0418aae356\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.1] C:\Users\FearNothing\.android\build-cache\23d1fe9fe71352d9bf5ec88d9208e4a86564dd19\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\FearNothing\.android\build-cache\4e1ba0af36d32876d45b18d9e6ae603e4a9e0aca\output\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:multidex:1.0.1] C:\Users\FearNothing\.android\build-cache\2db6bcf4ee49cce0f4c40406e51b93ee24722ad7\output\AndroidManifest.xml:18:5-42
+MERGED from [desitra_no_intervention:library:unspecified] D:\Android\workspace\desitra_no_intervention\library\build\intermediates\bundles\default\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\FearNothing\.android\build-cache\ef2d824b6fcf1d141fd68232a9e5ac4de37d03fe\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\FearNothing\.android\build-cache\cdc0709973e039d01bc7c3b21fb75cba3e21bc6a\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\FearNothing\.android\build-cache\b02b63d2a713d9ff88d78135cd3e7602224777d2\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\FearNothing\.android\build-cache\877205766888a5cd9fcf7d288eaddfb0aa4e359a\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\FearNothing\.android\build-cache\3b930403489bae0502b48264f091fe18e0dc0cfa\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\FearNothing\.android\build-cache\8931c2b16a20b3ddc46c541832642d698876cadb\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\FearNothing\.android\build-cache\2322aa3589aaa60448949e9f22bb79b73ca2067b\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\FearNothing\.android\build-cache\e128c28a4a0c6149dcc89d209ea6d7da6946f7c9\output\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\FearNothing\.android\build-cache\99da2f407c814a869fd31e55382a6487b421b26f\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.1] C:\Users\FearNothing\.android\build-cache\68f16a2aad364e2cbf6cf9c65edc0bf072e73908\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Android\workspace\desitra_no_intervention\app\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:25.3.1] C:\Users\FearNothing\.android\build-cache\68f16a2aad364e2cbf6cf9c65edc0bf072e73908\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\FearNothing\.android\build-cache\f2bae21435ae2e9ad5ee360bd33b0f0418aae356\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.1] C:\Users\FearNothing\.android\build-cache\23d1fe9fe71352d9bf5ec88d9208e4a86564dd19\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\FearNothing\.android\build-cache\ef2d824b6fcf1d141fd68232a9e5ac4de37d03fe\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\FearNothing\.android\build-cache\cdc0709973e039d01bc7c3b21fb75cba3e21bc6a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\FearNothing\.android\build-cache\b02b63d2a713d9ff88d78135cd3e7602224777d2\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\FearNothing\.android\build-cache\877205766888a5cd9fcf7d288eaddfb0aa4e359a\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\FearNothing\.android\build-cache\3b930403489bae0502b48264f091fe18e0dc0cfa\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\FearNothing\.android\build-cache\8931c2b16a20b3ddc46c541832642d698876cadb\output\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\FearNothing\.android\build-cache\2322aa3589aaa60448949e9f22bb79b73ca2067b\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\FearNothing\.android\build-cache\e128c28a4a0c6149dcc89d209ea6d7da6946f7c9\output\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\FearNothing\.android\build-cache\99da2f407c814a869fd31e55382a6487b421b26f\output\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:design:25.3.1] C:\Users\FearNothing\.android\build-cache\68f16a2aad364e2cbf6cf9c65edc0bf072e73908\output\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:design:25.3.1] C:\Users\FearNothing\.android\build-cache\68f16a2aad364e2cbf6cf9c65edc0bf072e73908\output\AndroidManifest.xml:26:9-47

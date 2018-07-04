@@ -1,0 +1,362 @@
+<resources>
+    <string name="app_name">Desitra 2.0 (no intervention)</string>
+
+    <!-- Main -->
+    <string name="test_marshall_button">Test XML Marshall</string>
+    <string name="student_panel_button">Student Action (TEST ONLY)</string>
+    <string name="test_ui">New UI (TEST ONLY)</string>
+    <string name="test_unity_communication_button">Test Unity Communication</string>
+    <string name="test_response">Test Response</string>
+    <string name="test_flow_sequence">Test Response</string>
+
+    <!-- PDDL Parser -->
+    <string name="parse_button">Parse domain/problem</string>
+
+    <!-- Transform Student Action -->
+    <string name="transform_student_action_button">Transform Student Action Input</string>
+    <string name="transform_student_action_button2">Transform Student Action (FOR TEST ONLY) </string>
+
+
+    <!-- UnityCommMain -->
+    <string name="a2u_topic">Android to Unity</string>
+    <string name="a2u_desc">Simulate send (Android to Unity)</string>
+    <string name="send_to_unity_button">Send to Unity</string>
+    <string name="send_to_unity_result">Unity Received</string>
+
+    <string name="u2a_topic">Unity to Android</string>
+    <string name="u2a_desc">Simulate send (Unity to Android)</string>
+    <string name="send_to_android_button">Send to Android</string>
+    <string name="send_to_android_result">Android Received</string>
+
+    <string name="clear_text">Clear</string>
+
+    <!-- Student Panel -->
+    <string name="rb1">RB1</string>
+    <string name="oc1">OC1</string>
+    <string name="oc2">OC2</string>
+    <string name="lt1">LT1</string>
+    <string name="mi1">MI1</string>
+    <string name="mi2">MI2</string>
+    <string name="mi3">MI3</string>
+    <string name="tmc1">TMC1</string>
+    <string name="rcf2">RCF2</string>
+    <string name="service1">SERVICE1</string>
+    <string name="service2">SERVICE2</string>
+
+    <!-- Marshall -->
+    <string name="send_student_action">Submit Action</string>
+
+
+    <string-array name="toolname_arrays">
+        <item></item>
+        <item>CLAMP</item>
+        <item>ROUND_DIAMOND_BUR</item>
+        <item>STEEL_ROUND_BUR</item>
+        <item>SAFE_TIPPED_TAPER_BUR</item>
+        <item>LA_NEEDLE</item>
+    </string-array>
+
+    <string-array name="toolname_empty_arrays">
+        <item> </item>
+    </string-array>
+
+    <string-array name="toolname_la_arrays">
+        <item></item>
+        <item>NEEDLE</item>
+    </string-array>
+
+    <string-array name="toolname_rb_arrays">
+        <item></item>
+        <item>CLAMP</item>
+    </string-array>
+
+    <string-array name="toolname_oc1_arrays">
+        <item></item>
+        <item>ROUND_DIAMOND_BUR</item>
+        <item>STEEL_ROUND_BUR</item>
+        <item>FILE</item>
+    </string-array>
+
+    <string-array name="entrypoint_arrays">
+        <item></item>
+        <item>APICAL</item>
+        <item>OCCLUSAL</item>
+        <item>BUCCAL</item>
+        <item>LINGUAL</item>
+        <item>MESIAL</item>
+        <item>DISTAL</item>
+    </string-array>
+
+    <string-array name="direction_arrays">
+        <item></item>
+        <item>APICAL</item>
+        <item>OCCLUSAL</item>
+        <item>BUCCAL</item>
+        <item>LINGUAL</item>
+        <item>MESIAL</item>
+        <item>DISTAL</item>
+    </string-array>
+
+    <string-array name="shape_array">
+        <item></item>
+        <item>OVAL</item>
+        <item>TRIANGLE</item>
+        <item>UPSIDE_DOWN_TRIANGLE</item>
+    </string-array>
+
+    <string-array name="steps_arrays">
+        <item></item>
+        <item>RB_1</item>
+        <item>OC_1</item>
+        <item>OC_2</item>
+        <item>LT_1</item>
+        <item>MI_1</item>
+        <item>MI_2</item>
+        <item>MI_3</item>
+        <item>TMC_1</item>
+        <item>RCF_1</item>
+        <item>RCF_2</item>
+        <item>SERVICE_1</item>
+        <item>SERVICE_2</item>
+    </string-array>
+
+    <string-array name="action_array">
+        <item>select action</item>
+        <item>insert_rubber_dam</item>
+        <item>drill_to_pulp_chamber</item>
+        <item>remove_dentine_shelf</item>
+        <item>select_local_anesthesia_type</item>
+        <item>pierce_anesthesia_needle</item>
+        <item>aspirate</item>
+        <item>retract</item>
+        <item>inject_anesthesia_and_draw</item>
+        <item>check_numb</item>
+        <item>measure_working_length_by_inserting_file</item>
+        <item>expand_overall_root_canal</item>
+        <item>expand_curvical_root_canal</item>
+        <item>expand_apical_root_canal</item>
+        <item>remove_rc_ledge</item>
+        <item>select_and_try_main_cone</item>
+        <item>coat_cement_to_rc_wall</item>
+        <item>insert_selected_main_cone</item>
+        <item>insert_lateral_cones</item>
+        <item>press_and_cut_cones</item>
+        <item>irregate</item>
+        <item>mop_rc</item>
+        <item>insert_file_into_root_canal</item>
+        <item>xray</item>
+        <item>grab_pen</item>
+        <item>drop_pen</item>
+        <item>action_a</item>
+        <item>action_b</item>
+        <item>action_c</item>
+        <item>action_d</item>
+        <item>action_e</item>
+    </string-array>
+
+    <string-array name="rb_sheet_position_array">
+        <item></item>
+        <item>cover</item>
+        <item>under</item>
+    </string-array>
+
+    <string name="title_activity_pedagogical">PedagogicalActivity</string>
+    <string name="title_activity_parser">ParserActivity</string>
+
+    <string name="fragment_item_1">Item 1</string>
+    <string name="fragment_item_2">Item 2</string>
+    <string name="fragment_item_3">Item 3</string>
+
+    <string-array name="empty_arrays">
+        <item> </item>
+    </string-array>
+
+    <string-array name="clamp_size_arrays">
+        <item>Select Clamp Size</item>
+        <item>C2</item>
+        <item>C9</item>
+        <item>C14</item>
+    </string-array>
+
+    <string-array name="round_diamond_size_arrays">
+        <item>Select Round Diamond Bur Size</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+    </string-array>
+
+    <string-array name="steel_round_size_arrays">
+        <item>Select Steel Round Bur Size</item>
+        <item>12</item>
+        <item>14</item>
+        <item>16</item>
+        <item>18</item>
+    </string-array>
+
+    <string-array name="safe_tipped_size_arrays">
+        <item>Select Safe Tipped Tapper Size</item>
+        <item>14</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="patient_cases_arrays">
+        <!-- item>Choose case</item -->
+        <item>Case 1</item>
+    </string-array>
+
+    <string-array name="la_needle_size_arrays">
+        <!-- item>Choose case</item -->
+        <item>30</item>
+    </string-array>
+
+    <string name="case1_name_string">Mr. X Smith</string>
+    <string name="case1_age_string">25</string>
+    <string name="case1_sex_string">Male</string>
+    <string name="case1_info_string">The patient came to see a dentist for root canal treatment for tooth
+        number 28. The dental infection was found in the root canal</string>
+
+    <!--<string name=""></string>-->
+
+    <!-- LA value array -->
+    <string-array name="la_solution_type_arrays">
+        <item>Select local anesthesia solution type</item>
+        <item>Lidocaine with Epinephrine</item>
+        <item>Mepivacaine</item>
+    </string-array>
+
+    <string-array name="la_solution_amt_arrays">
+        <item>Select local anesthesia solution amount</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string-array name="la_landmarks_arrays">
+        <item>Select local anesthesia landmark</item>
+        <item>Between coronoid notch and pterygomandibular raphae</item>
+        <item>At coronoid notch</item>
+        <item>At pterygomandibular raphae</item>
+    </string-array>
+
+    <string-array name="la_ref_tooth_no_arrays">
+        <item>Select reference point</item>
+        <item>WT31</item>
+        <item>WT42</item>
+        <item>WT44</item>
+    </string-array>
+
+    <string-array name="la_tool_length_arrays">
+        <item>Select tool length</item>
+        <item>21.0</item>
+        <item>30.0</item>
+    </string-array>
+
+    <string-array name="la_target_arrays_arrays">
+        <item>Select numb target</item>
+        <item>LOWER_LEFT_LIP</item>
+        <item>LOWER_RIGHT_LIP</item>
+    </string-array>
+
+    <string-array name="la_retract_array">
+        <item>Select retract depth</item>
+        <item>1</item>
+    </string-array>
+
+    <!--LT1-->
+    <string name="lt1_rc_depth">Difference between current file depth and root canal depth: </string>
+
+    <!--MI1-->
+    <string name="mi1_initial_tool_size">Initial tool size: </string>
+    <string name="mi1_final_tool_size">Final tool size: </string>
+    <string-array name="mi1_tool_size_arrays">
+        <item>Select tool size</item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>51</item>
+        <item>55</item>
+    </string-array>
+    <string name="size_diff_between_incremental_expansion_text">Size difference between each incremental expansion: </string>
+    <string-array name="mi1_size_diff_arrays">
+        <item>Select size</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="toolname_mi1_arrays">
+        <item></item>
+        <item>RC_SPREADER</item>
+        <item>RC_PLUGGER</item>
+        <item>GATES_GLIDDEN_DRILL</item>
+        <item>FILE</item>
+    </string-array>
+
+    <!--MI2-->
+    <string name="rc_drill_depth">Drill depth: </string>
+    <string-array name="rc_drill_depth_arrays">
+        <item></item>
+        <item>DEEPER_THAN_CURVE_RC_AREA</item>
+        <item>SHALLOWER_THAN_CURVE_RC_AREA</item>
+    </string-array>
+
+    <!--MI3-->
+    <string name="tool_size_func">Tool size number: </string>
+    <string-array name="tool_size_func_arrays">
+        <item></item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>51</item>
+        <item>55</item>
+    </string-array>
+
+    <!--TMC1-->
+    <string name="mc_size">Main cone size number: </string>
+    <string-array name="mc_size_arrays">
+        <item></item>
+        <item>6</item>
+        <item>8</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>51</item>
+        <item>55</item>
+    </string-array>
+
+    <!--PRESS AND CUT CONE-->
+    <string name="cut_cones">Cut cones at depth: </string>
+
+    <string-array name="tool_size_curv_arrays">
+        <item></item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+</resources>

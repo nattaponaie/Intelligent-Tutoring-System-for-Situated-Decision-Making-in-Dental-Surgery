@@ -1,0 +1,22 @@
+( define ( subplan oc_plan )
+( :plan main_plan )
+	;;(:planvars )
+	
+	;;( :init); //for initialized variable
+	( :body
+	   ( sequence
+	        ( action (drill_to_pulp_chamber) 
+	            :desired_outcome (AND 
+										(PC_FLOOR_VISIBLE)
+										(PC_ASEPTIC)
+										(NOT (WT_FRACTURE) )
+										(NOT (STRUCTURE_OVERCUT) )
+										(NOT (STRUCTURE_LEDGE) )
+										(DENTINE_SHELF_REMAIN)
+										(NOT (PC_FLOOR_BLEEDING) ) ;:allow_explore
+				)
+			)
+			  
+	   );; end-sequence
+	);; end-body
+) ;;end define

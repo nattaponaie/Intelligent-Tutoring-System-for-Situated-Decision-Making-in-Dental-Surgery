@@ -1,0 +1,22 @@
+( define ( subplan rb_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem la_problem1 )
+	;;(:planvars )
+	;;( :init); //for initialized variable
+	( :body
+	   ( sequence
+	   		(action (insert_rubber_dam) 
+				:desired_outcome (AND 
+						;( CLAMP_WITH_RB_ON_TOOTH ) :allow_explore
+	            		( FOUR_POINT_CONTACT_ON_TOOTH )
+	            		( WORKING_TOOTH_SEPARATED )   :main  
+	            		( WORKING_TOOTH_TYPE PREMOLAR )
+	            		( NOT ( PATIENT_RISK_TO_FAINT ) )
+	            		( NOT ( CLAMP_RISK_TO_RELEASED ) )
+				)
+			);;end-action
+	
+	   );; end-sequence
+	);; end-body
+) ;;end define

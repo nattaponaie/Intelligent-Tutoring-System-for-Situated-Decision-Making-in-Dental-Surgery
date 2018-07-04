@@ -1,0 +1,32 @@
+( define ( subplan rcf_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem main_problem1 )
+	;;(:planvars )
+	;;( :init); //for initialized variable
+	( :body
+	   ( sequence
+	   		(action (coat_cement_to_rc_wall)
+                :desired_outcome (RC_WALL_COATED_WITH_CEMENT)
+            )
+            
+	        (action (insert_selected_main_cone)
+                :desired_outcome (MAIN_CONE_INSERTED)
+            ) 
+            ;student would not do silly decision
+            
+            (action (insert_lateral_cones)
+                :desired_outcome (AND 
+						(LATERAL_CONES_INSERTED)
+				)
+            )
+            
+	        (action (press_and_cut_cones)
+                :desired_outcome (AND 
+						(CONES_PROPERLY_CUT)
+                        (CONE_HEIGHT_CORRECT)
+				)
+            )
+       );; end-sequence
+	);; end-body
+) ;;end define

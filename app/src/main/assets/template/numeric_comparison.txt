@@ -1,0 +1,7 @@
+less=is less than 
+less_or_equal=is less or equal than
+greater=is greater than
+greater_or_equal=is greater than
+equal=equals to
+fn_atom=equals to
+equal_atom=equals to

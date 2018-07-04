@@ -1,0 +1,44 @@
+( define ( subplan a_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem main_problem )
+	;;(:planvars )
+	;;( :init); //for initialized variable
+	( :body
+	   ( sequence
+	       (action (action_a)
+                :desired_outcome( AND
+                    ( C )
+                    ( COLOR BLUE )
+                    ;( COLOR RED )
+                    ;(NOT (COLOR RED))
+                )
+         )
+	       (action (action_b)
+                :desired_outcome( AND
+                    ( NOT (A) )
+                )
+         )
+         (action (action_c)
+                :desired_outcome( AND
+                    ( D )
+                )
+         )
+         (action (action_d)
+                :desired_outcome( AND
+                    (COLOR BLUE)
+                )
+         )
+         (action (action_e)
+                :desired_outcome( AND
+                    (COLOR RED)
+                )
+         )
+         (action (action_f)
+                :desired_outcome( AND
+                    (COLOR RED)
+                )
+         )
+	   );; end-sequence
+	);; end-body
+) ;;end define

@@ -1,0 +1,60 @@
+( define ( subplan rcp_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem main_problem1 )
+	;;(:planvars )
+	;;( :init); //for initialized variable
+	( :body
+        ( sequence
+;            (action (irregate)
+;                :desired_outcome (RC_CLEAN)
+;            )
+            (action (expand_overall_root_canal)
+                :desired_outcome (AND
+                    (OVERALL_RC_AREA_INITIALLY_EXPANDED) :main
+                    ;;(EXPANDED_AREA_DEEP_ENOUGH)
+                    (OVERALL_EXPANDED_AREA_WIDE_ENOUGH)
+                    ( NOT (RC_APICAL_PERFORATED) )
+                    ( NOT (RC_STRUCTURE_OVERCUT) )
+                    ( NOT (RC_STRUCTURE_OVERLEDGE) ) :allow_explore
+                    ( NOT (INITIAL_TOOL_MAY_OVERSIZE) )
+                    ( NOT (INCREASING_TOOL_OVERSIZE) )
+                )
+            )
+            (action (expand_curvical_root_canal)
+                :desired_outcome (AND
+                    (CURVICAL_RC_AREA_EXPANDED)
+                    (CURVICAL_EXPANDED_AREA_WIDE_ENOUGH)
+                    ( NOT (RC_STRUCTURE_OVERCUT) )
+                    ( NOT (RC_STRUCTURE_OVERLEDGE) )
+                    ( NOT (TOOL_RISK_TO_BROKEN) )
+                    ( NOT (INCREASING_TOOL_OVERSIZE) )
+                )
+            )
+            (action (measure_working_length_by_inserting_file)
+                :desired_outcome( AND
+                    ( NOT (WL_TOO_DEEP) ) :allow_explore
+                    ( NOT (WL_TOO_SHORT) ) :allow_explore
+                    ( WL_APPEAR ) :main
+                    ( NOT (RISK_TO_UNSTABLE_FILE) )
+                )
+           )
+            (action (expand_apical_root_canal)
+                :desired_outcome (AND
+                    (APICAL_RC_AREA_EXPANDED) :main
+                    ( NOT (RC_STRUCTURE_OVERCUT) )
+                    ( NOT (RC_STRUCTURE_OVERLEDGE) )
+                    ( NOT (RC_APICAL_PERFORATED) )
+                    ( NOT (INCREASING_TOOL_OVERSIZE) )
+                )
+            )
+            (action (remove_rc_ledge)
+                :desired_outcome (AND
+                    (NOT (RC_STRUCTURE_OVERCUT) )
+                    (NOT (RC_STRUCTURE_LEDGE) )
+                )
+            )
+        )
+    ) ;;end body
+	   
+) ;;end define

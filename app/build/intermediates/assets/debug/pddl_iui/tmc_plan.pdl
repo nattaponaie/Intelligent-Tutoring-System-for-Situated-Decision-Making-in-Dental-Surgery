@@ -1,0 +1,25 @@
+( define ( subplan tmc_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem main_problem1 )
+	;;(:planvars )
+	;;( :init); //for initialized variable
+	( :body
+	   ( sequence
+            (action (irregate)
+                :desired_outcome (RC_CLEAN) 
+            );;end-action
+            
+            (action (mop_rc)
+                :desired_outcome (RC_DRY)
+            );;end-action
+            
+	   		(action (select_and_try_main_cone)
+	            :desired_outcome (AND
+	            			(TACTILE_TEST_TUGBACK)
+                            ;(VISUAL_TEST_MCLENGTH_EQ_WORKINGLENGTH)
+	           )
+	        );;end-action
+	   );; end-sequence
+	);; end-body
+) ;;end define

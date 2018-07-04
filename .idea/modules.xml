@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:/Senior Project Second Semester/Projects/desitra_no_intervention/desitra_2.0_engine.iml" filepath="D:/Senior Project Second Semester/Projects/desitra_no_intervention/desitra_2.0_engine.iml" />
+      <module fileurl="file://D:/Senior Project Second Semester/Projects/desitra_no_intervention/desitra_2.0_engine.git.iml" filepath="D:/Senior Project Second Semester/Projects/desitra_no_intervention/desitra_2.0_engine.git.iml" />
+      <module fileurl="file://$PROJECT_DIR$/desitra_no_intervention.iml" filepath="$PROJECT_DIR$/desitra_no_intervention.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jar/jar.iml" filepath="$PROJECT_DIR$/jar/jar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+    </modules>
+  </component>
+</project>

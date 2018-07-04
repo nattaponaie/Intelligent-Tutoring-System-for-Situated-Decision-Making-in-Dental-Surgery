@@ -1,0 +1,1093 @@
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".panel.MainActivity">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <LinearLayout
+        android:layout_below="@+id/tab_layout"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/view_layout_border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="Patient Info"-->
+                        <!--android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"-->
+                        <!--android:textSize="25sp"-->
+                        <!--android:gravity="center"/>-->
+
+
+                    <LinearLayout
+                        android:id="@+id/patient_info_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <!--android:layout_marginTop="20dp">-->
+
+                        <LinearLayout
+                            android:id="@+id/initial_state_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_margin="2dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Initial State"
+                                android:gravity="center"
+                                android:scrollbars="vertical"
+                                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/patient_info_textview"
+                                android:layout_margin="2dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:scrollbars="vertical"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/fact_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_margin="2dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Current State"
+                                android:gravity="center"
+                                android:scrollbars="vertical"
+                                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                                android:textSize="20sp"/>
+
+                            <TextView
+                                android:id="@+id/current_state_textview"
+                                android:layout_margin="2dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:scrollbars="vertical"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/selecting_case_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Case Selection"
+                            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                            android:textSize="20sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_weight="1"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:text="Case:"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                            <Spinner
+                                android:layout_weight="1"
+                                android:id="@+id/spinner_patient_case"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/patient_cases_arrays"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/patient_information_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Case Information"
+                            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/patient_name_textview"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <TextView
+                            android:id="@+id/patient_age_textview"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Age:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <TextView
+                            android:id="@+id/patient_sex_textview"
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Sex:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/textbox_border">
+
+                            <!--
+                            <TextView
+                                android:id="@+id/patient_info_textview"
+                                android:layout_margin="2dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:scrollbars="vertical"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+-->
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/view_layout_border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Action result"
+                        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                        android:textSize="25sp"
+                        android:gravity="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/displayActionLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                            android:textSize="20sp"
+                            android:text="Action: "/>
+
+                        <TextView
+                            android:id="@+id/action_result_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/satisfyDesiredOutcomeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                            android:textSize="20sp"
+                            android:text="Result: "/>
+
+                        <TextView
+                            android:id="@+id/desired_outcome_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/effectLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/projectionLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                                android:textSize="20sp"
+                                android:text="Deduced Effects: "/>
+
+                            <TextView
+                                android:id="@+id/effects_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/appliedLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                                android:textSize="20sp"
+                                android:text="Next State: "/>
+
+                            <TextView
+                                android:id="@+id/applied_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+
+                            <TextView
+                                android:id="@+id/new_effect_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/red"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Menu"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/tutor_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Menu"
+                        android:textStyle="bold"
+                        android:background="@drawable/textbox_border"/>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/view_layout_border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Student Action"
+                        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                        android:textSize="25sp"
+                        android:gravity="center"/>
+
+                    <!-- Choose Action -->
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Action Selection"
+                        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                            android:textSize="20sp"
+                            android:text="Action: "/>
+
+                        <Spinner
+                            android:layout_weight="1"
+                            android:id="@+id/spinner_action"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/action_array"/>
+
+                    </LinearLayout>
+                    <!-- END Choose Action -->
+
+                    <!-- LA drop down -->
+
+                    <LinearLayout
+                        android:id="@+id/la_solution_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solution Type:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_la_solution_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/la_solution_type_arrays"/>
+
+                        <Spinner
+                            android:id="@+id/spinner_la_solution_amt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/la_solution_amt_arrays"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/la_landmark_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Local Anesthesia Landmark:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_la_landmark"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/la_landmarks_arrays"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/la_ref_tooth_no_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Reference Tooth Number:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_reference_tooth_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/la_ref_tooth_no_arrays"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/la_remain_depth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Remain Depth: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <EditText
+                            android:id="@+id/sendtext_laremaindepth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/insert_la_needle_depth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Insert needle depth: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <EditText
+                            android:id="@+id/sendtext_laNeedledepth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text">
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/la_retract_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Retract depth: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_retract_depth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/la_retract_array"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/la_inject_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Solution amount: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <EditText
+                            android:id="@+id/sendtext_solution_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/la_check_numb_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select target check numb:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_target_check_numb"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/la_target_arrays_arrays"/>
+                    </LinearLayout>
+
+                    <!-- END LA DROP DOWN -->
+                    <LinearLayout
+                        android:id="@+id/entry_point_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Entry Point:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_entrypoint"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/entrypoint_arrays"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/direction_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Direction:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_direction"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/direction_arrays"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/drill_shape_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Drill Shape: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_shape"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/shape_array"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/drill_depth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Drill Depth: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <EditText
+                            android:id="@+id/sendtext_drilldepth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text">
+
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_add_tool"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select Tool Name"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_tool_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tool_size_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tool Size:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_tool_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tool_length_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tool Length:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_tool_length"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/la_tool_length_arrays"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/insert_rb_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rubber Sheet Position: "
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_rb_sheet_position"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/rb_sheet_position_array"/>
+
+                        <CheckBox
+                            android:id="@+id/is_rb_tool_selected_checkbox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Rubber Dam Tool Set (FRAME, SHEET, FORCEP)" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lt_1_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lt1_rc_depth"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <EditText
+                            android:id="@+id/rc_depth_to_file_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text">
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mi_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mi1_initial_tool_size"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_initial_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/mi1_tool_size_arrays"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mi1_final_tool_size"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_final_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/mi1_tool_size_arrays"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/size_diff_between_incremental_expansion_text"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_size_diff_incremental"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/mi1_size_diff_arrays"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rc_drill_depth_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/rc_drill_depth"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_rc_drill_depth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/rc_drill_depth_arrays"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tool_size_function_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tool_size_func"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_tool_size_func"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/tool_size_func_arrays"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mc_size_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mc_size"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <Spinner
+                            android:id="@+id/spinner_mc_size"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/mc_size_arrays"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/press_and_cut_cone_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cut_cones"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Menu" />
+
+                        <EditText
+                            android:id="@+id/cut_cones_depth_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text">
+                        </EditText>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/submit_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/submit_action_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/send_student_action" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:visibility="gone"
+                android:background="@drawable/view_layout_border">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tutor"
+                        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                        android:textSize="25sp"
+                        android:gravity="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/tutorInterventionLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Intervention:"
+                            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                            android:textSize="20sp" />
+                        <TextView
+                            android:id="@+id/tutorInterventionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:inputType="textMultiLine"/>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="5dp"
+                            android:background="#c0c0c0" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                            android:textSize="20sp"
+                            android:text="Enter the answer: "/>
+
+                        <EditText
+                            android:id="@+id/studentResponseEditText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:textColor="@color/black"
+                            android:inputType="number">
+                            <requestFocus />
+                        </EditText>
+
+                        <Button
+                            android:id="@+id/interventionSubmitButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Submit" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

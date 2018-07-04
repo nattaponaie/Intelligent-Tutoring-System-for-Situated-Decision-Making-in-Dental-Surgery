@@ -1,0 +1,15 @@
+(define (plan rct_plan)
+(:domain main_domain) 
+(:problem main_problem1)  ;
+;;(:planvars )
+;;(:init )  ;; this is for initialize plan variable
+ 
+(:body
+   (sequence
+          ;;----- call subplan ------
+          ;(subplan ( la_plan ) :optional(PATIENT_PULPITIS));;end-sub-plan
+          (subplan ( rb_plan ) );;end-sub-plan
+          (subplan ( oc_plan ) );;end-sub-plan
+   );; end-sequence
+);; end-body
+) ;;end define

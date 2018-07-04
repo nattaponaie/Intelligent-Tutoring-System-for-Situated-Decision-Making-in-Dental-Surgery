@@ -1,0 +1,21 @@
+(define (plan rb_plan)
+	(:domain rb)
+	(:problem pb1)
+   	(:planvars )
+	(:init )
+	(:body
+		(sequence
+			(action (insert_rubber_dam) 
+				:desired_outcome (AND 
+						( CLAMP_WITH_RB_ON_TOOTH )
+	            		( FOUR_POINT_CONTACT_ON_TOOTH )
+	            		( NOT ( PATIENT_RISK_TO_FAINT ) )
+	            		( NOT ( CLAMP_RISK_TO_RELEASED ) )
+				)
+			)
+		)
+	)
+)
+
+
+

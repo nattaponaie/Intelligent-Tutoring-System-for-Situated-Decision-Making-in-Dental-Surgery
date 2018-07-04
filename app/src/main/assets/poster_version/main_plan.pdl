@@ -1,0 +1,12 @@
+(define (plan test_plan)
+(:domain main_domain) 
+(:problem main_problem)  ;
+;;(:planvars )
+;;(:init )  ;; this is for initialize plan variable
+ 
+(:body
+   (sequence
+          (subplan ( grabber_subplan ) );;end-sub-plan
+   );; end-sequence
+);; end-body
+) ;;end define

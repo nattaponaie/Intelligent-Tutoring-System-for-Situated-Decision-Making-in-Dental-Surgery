@@ -1,0 +1,71 @@
+( define ( subplan rcp_plan )
+( :plan main_plan )
+( :domain la_domain ) 
+( :problem main_problem1 )
+	;;(:planvars )
+	;;( :init); //for initialized variable
+	( :body
+	   ( sequence
+            (action (irregate)
+                :desired_outcome (RC_CLEAN)
+            ) ; semi physical skill such as 'do it slowly'
+	           ;----------
+               ; There are many methods to achieve this.
+               ; If we create representation that support all methods, this will require alot details to make the representation become such open-world domain
+               ; I prefer using only PASSIVE STEPBACK technique
+               ;----------
+               
+            (while ( NOT (FILE_SIZE N15))
+                ( action (expand_root_canal_using_file) 
+                    :desired_outcome (AND 
+                        (FILE_SIZE_ONE_STEP_GR_PREVIOUS_FILE_SIZE)
+                        ( NOT (RC_OVERCUT) )
+                        ( NOT (RC_OVERLEDGE) )
+                        ( EXPANDED_RC_AREA OVERALL )
+					)
+                )
+            )
+            (action (irregate)
+                :desired_outcome (RC_CLEAN)
+            ) ;;end-action
+               
+            (while ( NOT (GATE_GRIDDEN_DRILL_SIZE N4) )
+	                 ( action (expand_root_canal_using_gates_griden_drill)
+                        :desired_outcome(AND
+                            ( NOT (RC_OVERCUT) )
+                            ( NOT (RC_OVERLEDGE) )
+                            ( EXPANDED_RC_AREA HIGHER_THAN_CURVE_PART )
+                        )
+                    );;end-action
+	                (action (irregate)
+                        :desired_outcome (RC_CLEAN)
+                    ) ;;end-action
+	        );;end-while
+            
+            ;Measure here again because expanding RC will decrease working length 
+            (action (measure_working_length_by_inserting_file)
+                :desired_outcome(working_length_depth_correct)
+            )
+               
+            (while ( NOT (APICAL_CONSTRICTION_SHAPE_CONNECT_UPPER_PART) )
+	                 ( action (expand_root_canal_using_file )
+                        :desired_outcome(AND
+                            (NOT (RC_OVERCUT) )
+                            ( EXPANDED_RC_AREA DEEPER_THAN_CURVE_PART )
+                        )
+                     );;end-action
+	                 (action (irregate)
+                        :desired_outcome (RC_CLEAN)
+                     ) ;;end-action
+	        );;end-while
+              
+            (action (remove_rc_ledge)
+                :desired_outcome(AND
+                            (NOT (RC_OVERCUT) )
+                            (NOT (RC_LEDGE) )
+                        )
+            )
+            
+	   );; end-sequence
+	);; end-body
+) ;;end define

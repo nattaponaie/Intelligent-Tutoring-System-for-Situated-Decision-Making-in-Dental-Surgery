@@ -1,0 +1,54 @@
+( define ( subplan oc_plan )
+( :plan main_plan )
+( :domain main_domain ) 
+( :problem main_problem1 )
+
+;;(:planvars )
+	
+;;( :init); //for initialized variable
+	( :body
+	   ( sequence
+	          ( action (drill_to_pulp_chamber) 
+					:desired_outcome (AND 
+										(PC_FLOOR_VISIBLE) :main
+										(PC_ASEPTIC)
+										(NOT (WT_FRACTURE) )
+										(NOT (STRUCTURE_OVERCUT) )
+										(NOT (STRUCTURE_LEDGE) )
+										(DENTINE_SHELF_REMAIN)
+										;(NOT (PC_FLOOR_BLEEDING) ) :allow_explore
+					)
+              )
+	          
+	          (if (PC_FLOOR_PERFORATED)
+	               ;effect if true
+	               ( sequence 
+		               ( action (stop_bleeding) 
+			                 :desired_outcome (AND (NOT (PC_FLOOR_BLEEDING)) :main 
+					  			   (PC_FLOOR_VISIBLE)
+					  			);desire_outcome
+				        );;end-action
+				        
+				        ( action (filling_pulp_chamber_floor) 
+			                 :desired_outcome( FILLING_COMPATIBLE_WITH_TISSUE )
+				        );;end-action
+	               )
+	               
+	               ;effect if false
+	               ()  ;; nothing
+	          );end-if
+	          
+			  ( action (remove_dentine_shelf) 
+		        :desired_outcome (AND 
+						(PC_FLOOR_VISIBLE)
+						(PC_ASEPTIC)
+						(NOT (WT_FRACTURE) )
+						(NOT (STRUCTURE_OVERCUT) )
+						(NOT (STRUCTURE_LEDGE) )
+						(NOT (DENTINE_SHELF_REMAIN) ) :main
+                        )
+		      );;end-action
+		      
+	   );; end-sequence
+	);; end-body
+) ;;end define
